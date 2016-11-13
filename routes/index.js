@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var fantasy = require('../lib/fantasy');
 
 
-
-router.get('/data', fantasy.getOnePlayer);
+var Fantasy = require('../lib/fantasy');
+var fantasy = new Fantasy();
+router.get('/data', fantasy.getAllPlayers);
 
 
 
